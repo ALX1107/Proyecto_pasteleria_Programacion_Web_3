@@ -1,0 +1,254 @@
+.app-header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-text {
+  color: #667eea;
+}
+
+/* Navigation */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  background: #f8f9fa;
+  color: #667eea;
+}
+
+.cart-count {
+  background: #dc3545;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  margin-left: 5px;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* User Section */
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-login,
+.btn-register {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-login {
+  background: transparent;
+  color: #667eea;
+  border: 1px solid #667eea;
+}
+
+.btn-login:hover {
+  background: #667eea;
+  color: white;
+}
+
+.btn-register {
+  background: #667eea;
+  color: white;
+}
+
+.btn-register:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}
+
+/* User Menu */
+.user-menu {
+  position: relative;
+}
+
+.user-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-button:hover {
+  background: #e9ecef;
+}
+
+.user-icon {
+  font-size: 1.2rem;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.dropdown-arrow {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  z-index: 1001;
+  margin-top: 5px;
+}
+
+.user-info {
+  padding: 15px;
+}
+
+.user-email {
+  margin: 0 0 5px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.user-role {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.user-role.Admin {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.user-role.Employee {
+  background: #d4edda;
+  color: #155724;
+}
+
+.user-role.customer {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 12px 15px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: #f8f9fa;
+}
+
+/* Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+    height: 60px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .nav-menu {
+    display: none; /* Hide navigation on mobile for now */
+  }
+
+  .auth-buttons {
+    gap: 5px;
+  }
+
+  .btn-login,
+  .btn-register {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .user-dropdown {
+    min-width: 180px;
+  }
+}
